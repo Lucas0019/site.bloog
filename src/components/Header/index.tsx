@@ -13,9 +13,6 @@ export const Header = () => {
           <ActiveLink activeClassName={styles.active} href="/posts">
             <a>Posts</a>
           </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/projects">
-            <a>Projects</a>
-          </ActiveLink>
         </nav>
       </div>
     </header>

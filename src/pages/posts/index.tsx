@@ -12,7 +12,7 @@ export const Posts = () => {
 
       <main className={styles.container}>
         <div className={styles.postsList}>
-          {Array(6).fill(0).map((_, index) => (
+          {Array(9).fill(0).map((_, index) => (
             <Link href='/posts/1' key={index}>
               <a>
                 <time>11/02/200</time>

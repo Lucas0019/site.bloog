@@ -2,6 +2,7 @@ type PostsProps = {
   id: string;
   slug: string;
   title: string;
+  createdAt: string;
   coverPhoto: {
     url: string;
   };

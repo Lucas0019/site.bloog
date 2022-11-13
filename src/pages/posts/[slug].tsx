@@ -4,9 +4,12 @@ import { hygraph } from "../../graphql/hygraph";
 import { GET_POST } from "../../graphql/querys/post";
 import { GET_POST_SLUG } from "../../graphql/querys/slug";
 import { GetStaticPaths, GetStaticProps } from 'next';
+import style from './post.module.scss'
 import Link from "next/link";
+import { AuthorDatePost } from '../../components/AuthorDatePost/index';
 
 export const Post = ({post}: any) => {
+
   return (
     <>
       <Head>
@@ -15,17 +18,23 @@ export const Post = ({post}: any) => {
       <main className={styles.container}>
         <article className={styles.post}>
           <h1>{post.title}</h1>
-          <time>{post.createdAt}</time>
+          <AuthorDatePost createdAt={post.createdAt}/>
           <div>
             <Link href="/" passHref>
-              <a>
-                {post.author.name}
+              <a className={style.author}>
+                <p>
+                  <span>Por: </span>
+                  {post.author.name}  
+                </p>
               </a>
             </Link>
           </div>
-          <section>
-            <p dangerouslySetInnerHTML={{__html: post.content.html}} />
-          </section>
+
+          <div 
+            className={style.contentPost} 
+            dangerouslySetInnerHTML={{__html: post.content.html}} 
+          />
+          
         </article>
       </main>
     </>

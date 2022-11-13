@@ -6,9 +6,9 @@ import { GetStaticProps } from "next";
 import { hygraph } from "../../graphql/hygraph";
 import { QUERY } from "../../graphql/querys/posts";
 import { IPosts } from "../../types/posts";
+import { AuthorDatePost } from "../../components/AuthorDatePost";
 
 export const Posts = ({ posts }: IPosts) => {
-
 
   return (
     <>
@@ -22,7 +22,7 @@ export const Posts = ({ posts }: IPosts) => {
             posts.map((post) => (
               <Link href={`/posts/${post.slug}`} key={post.id}>
                 <a>
-                  <time>{post.createdAt}</time>
+                <AuthorDatePost createdAt={post.createdAt}/>
                   <strong>{post?.title}</strong>
                   <Image
                     src={post?.coverPhoto.url}

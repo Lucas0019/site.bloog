@@ -7,8 +7,9 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import style from './post.module.scss'
 import Link from "next/link";
 import { AuthorDatePost } from '../../components/AuthorDatePost/index';
+import { IPost } from "../../types/post";
 
-export const Post = ({post}: any) => {
+export const Post = ({post}: IPost) => {
 
   return (
     <>

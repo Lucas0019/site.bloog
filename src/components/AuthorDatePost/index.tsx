@@ -9,7 +9,7 @@ export const AuthorDatePost = ({createdAt}: IAuthorDatePost) => {
   return (
     <>
       <time className={style.datePost}>
-        <span>Postado em: </span> 
+        <span>Published in: </span> 
         {datePost(createdAt)}
       </time>
     </>

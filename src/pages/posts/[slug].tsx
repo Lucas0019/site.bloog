@@ -16,25 +16,32 @@ export const Post = ({post}: IPost) => {
       <Head>
         <title>Post | Bloog</title>
       </Head>
-      <main className={styles.container}>
-        <article className={styles.post}>
-          <h1>{post.title}</h1>
-          <AuthorDatePost createdAt={post.createdAt}/>
+      <main className={styles?.container}>
+        <article className={styles?.post}>
+          {post.title && <h1>{post.title}</h1> }
+          <AuthorDatePost createdAt={post?.createdAt}/>
           <div>
             <Link href="/" passHref>
               <a className={style.author}>
-                <p>
-                  <span>Por: </span>
-                  {post.author.name}  
-                </p>
+                { post?.author?.name  && 
+                  <p>
+                    Por: {post?.author?.name}  
+                  </p>
+                }
               </a>
             </Link>
           </div>
 
-          <div 
-            className={style.contentPost} 
-            dangerouslySetInnerHTML={{__html: post.content.html}} 
-          />
+          {post?.content.html ? (
+            <div 
+              className={style.contentPost} 
+              dangerouslySetInnerHTML={{__html: post?.content?.html}} 
+            />
+          ) : (
+              <p>
+                There is no content for this post yet.
+              </p>
+          )}
           
         </article>
       </main>
@@ -51,7 +58,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     slug: String(slug),
   });
 
-  const post = data.post;
+  const post = data?.post;
 
   return {
     props: {
@@ -66,10 +73,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { posts } = await hygraph.request(GET_POST_SLUG);
 
   return {
-    paths: posts.map((post: { slug: string; }) => {
+    paths: posts?.map((post: { slug: string; }) => {
       return {
         params: {
-          slug: post.slug,
+          slug: post?.slug,
         },
       };
     }),

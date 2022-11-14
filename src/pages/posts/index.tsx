@@ -19,16 +19,16 @@ export const Posts = ({ posts }: IPosts) => {
       <main className={styles.container}>
         <div className={styles.postsList}>
           {posts &&
-            posts.map((post) => (
-              <Link href={`/posts/${post.slug}`} key={post.id}>
+            posts?.map((post) => (
+              <Link href={`/posts/${post?.slug}`} key={post?.id}>
                 <a>
                 <AuthorDatePost createdAt={post.createdAt}/>
                   <strong>{post?.title}</strong>
                   <Image
-                    src={post?.coverPhoto.url}
+                    src={post?.coverPhoto?.url}
                     width={600}
                     height={300}
-                    alt={post.title}
+                    alt={post?.title}
                     className={styles.imageCard}
                   />
                 </a>

@@ -1,7 +1,11 @@
 <p align="center">
-  Bloog - Portal de notícias de ecommerce 📁
+
+  <img src="./.github/cart-readme.svg" alt="Cart" width="80px" hegth="90px">
+
+  ###  Bloog - Portal de notícias 📁
+  
   <br>
-  <br>
+  
 
 <p align="center">
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
@@ -14,7 +18,7 @@
 
 ## :dart: Sobre ##
 
-O projeto Bloog é onde os usuários podem ter acesso ao conteúdo de postagens do mundo de ecommerce.
+O projeto Bloog é onde os usuários podem ter acesso ao conteúdo de postagens de notícias de tecnologias.
 
 Essa é uma aplicação Serverless, ou seja, todo o processo que dependeria de um backend foi integrado dentro do front e seguindo o padrão da JAMStack.
 

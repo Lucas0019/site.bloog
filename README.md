@@ -1,20 +1,22 @@
 <p align="center">
 
-  <img src="./.github/cart-readme.svg" alt="Cart" width="80px" hegth="90px">
+  <img src="./.github/img-readme.svg" alt="Cart" width="80px" height="90px">
 
-  ###  Bloog - Portal de notícias 📁
-  
-  <br>
-  
+  <h3 align="center">Bloog - Portal de notícias 📁 </h3>
+
+</p>
 
 <p align="center">
+  <a href="#dart-sobre">Motivação</a> &#xa0; | &#xa0;
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#white_check_mark-Requisitos">Requisitos</a> &#xa0; | &#xa0;
-  <a href="#checkered_flag-começando">Começando</a> &#xa0; &#xa0; | &#xa0;
+  <a href="#checkered_flag-começando">Começando</a>
 </p>
 
-<br>
+## 🗿 Motivação
+
+Aprender como desenvolver e implementar features em arquitetura de ambientes Next, junto com GraphQL como client de requisição de dados, para poder fixar conceitos para desenvolvimento de lojas ecommerce em Fast Store da VTEX
 
 ## :dart: Sobre ##
 
